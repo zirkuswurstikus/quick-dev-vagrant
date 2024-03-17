@@ -1,0 +1,7 @@
+// file: ssh/README.adoc
+= README
+
+This folder contain the ssh keys for the developemt environment.
+
+id_vagrant:: This are the default insecure vagrant keys.
+

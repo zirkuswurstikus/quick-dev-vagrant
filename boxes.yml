@@ -1,0 +1,24 @@
+---
+vagrant:
+  hosts:
+    devop:
+      ansible_host: 192.168.205.10
+      v_box: bento/debian-12
+      v_exposed_ssh_port: 2222
+      v_mem: 1024
+      v_cpu: 2
+      v_role: controller  #  [controller, worker]
+      apt_packages:
+        - vim
+        - git
+        - ca-certificates
+        - python3-virtualenv
+        - ansible
+    server01:
+      ansible_host: 192.168.205.9
+      v_box: bento/debian-11
+      v_exposed_ssh_port: 2209
+      v_mem: 1024
+      v_cpu: 2
+      apt_packages:
+        - ca-certificates
