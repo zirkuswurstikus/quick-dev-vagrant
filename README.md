@@ -103,4 +103,4 @@ This version corrects the nested code block and ensures clarity and consistency 
 
 ## DEMO
 
-<script src="https://asciinema.org/a/RsaQfY4CeZG25U4vwdLxYZhES.js" id="asciicast-647345" async="true"></script>
+[![asciicast](https://asciinema.org/a/RsaQfY4CeZG25U4vwdLxYZhES.svg)](https://asciinema.org/a/RsaQfY4CeZG25U4vwdLxYZhES)
