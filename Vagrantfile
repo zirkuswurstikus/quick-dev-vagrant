@@ -62,7 +62,21 @@ Vagrant.configure("2") do |config|
           prl.name = hostname
           prl.memory = properties['v_mem']
           prl.cpus = properties['v_cpu']
-          # Customize further if needed
+          # prl.disk_size = "50GB"
+          # prl.nested_virtualization = true
+          # prl.optimize_power_consumption = true
+          # prl.video_memory = 256 # Allocate more video memory for better graphic performance
+        end
+        # Virtualbox provider customization
+        cfg.vm.provider "virtualbox" do |vb|
+          vb.name = hostname
+          vb.memory = properties['v_mem']
+          vb.cpus = properties['v_cpu']
+          # vb.customize ["modifyvm", :id, "--paravirtprovider", "kvm"] # Or "hyperv" for Windows
+          # vb.customize ["modifyvm", :id, "--disksize", 50000] # Set the disk size to 50000 MB
+          # vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxsvga"] # Choose between vboxvga, vboxsvga, and vmsvga based on needs
+          # vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+          # vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
         end
       end
     end
